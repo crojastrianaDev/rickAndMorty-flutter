@@ -1,16 +1,17 @@
-# taller
+# APLICACIÓN MÓVIL 
 
-A new Flutter project.
+En este repositorio se encuentra alojado una alplicación Móvil creada con FLutter que hace uso de la Api de Rick anf Morty.
 
-## Getting Started
+## CUENTA CON
 
-This project is a starting point for a Flutter application.
+-Login
 
-A few resources to get you started if this is your first Flutter project:
+-Registro
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+-Inicio
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  -Menu lateral para ver los personajes favoritos
+  -Boton flotante para modificar datos.
+  
+-Descripción de personajes
+  -Boton para compartir personaje.
