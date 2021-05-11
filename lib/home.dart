@@ -9,6 +9,7 @@ class HomePage extends StatelessWidget {
         toolbarHeight: 150,
         title: Text('Home'),
         backgroundColor: Color(0xFF3C3E44),
+        actions: [IconButton(icon: Icon(Icons.clear), onPressed: () {})],
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
             topLeft: Radius.zero,

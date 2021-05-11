@@ -8,6 +8,7 @@ class DescriptionPage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           toolbarHeight: 150,
+          actions: [IconButton(icon: Icon(Icons.clear), onPressed: () {})],
           title: Text('Personaje xxxxx'),
           backgroundColor: Color(0xFF3C3E44),
           shape: RoundedRectangleBorder(
