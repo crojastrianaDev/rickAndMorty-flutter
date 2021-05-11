@@ -8,8 +8,7 @@ En este repositorio se encuentra alojado una alplicación Móvil creada con FLut
 
 -Registro
 
--Inicio
-
+## Inicio
   -Menu lateral para ver los personajes favoritos
   -Boton flotante para modificar datos.
   
