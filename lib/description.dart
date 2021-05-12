@@ -32,6 +32,7 @@ class DescriptionPage extends StatelessWidget {
             Card(
               color: Color(0xFF24282F),
               clipBehavior: Clip.antiAlias,
+              margin: EdgeInsets.fromLTRB(10, 20, 5, 30),
               child: Column(
                 children: <Widget>[
                   ListTile(

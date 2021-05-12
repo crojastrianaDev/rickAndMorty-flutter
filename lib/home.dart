@@ -42,6 +42,7 @@ class HomePage extends StatelessWidget {
             margin: EdgeInsets.all(10),
           ),*/
           Container(
+            margin: EdgeInsets.fromLTRB(10, 20, 5, 30),
             height: 450,
             child: Card(
               color: Color(0xFF24282F),
