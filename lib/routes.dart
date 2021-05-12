@@ -6,10 +6,10 @@ import 'package:taller/home.dart';
 import 'package:taller/description.dart';
 import 'package:taller/updateUser.dart';
 import 'package:taller/updatePassword.dart';
+import 'package:taller/descriptionApi.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings setting) {
-    final args = setting.arguments;
     switch (setting.name) {
       case '/':
         return MaterialPageRoute(builder: (_) => LoginPage());
@@ -23,6 +23,9 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => UpdateUser());
       case '/updatePassword/id':
         return MaterialPageRoute(builder: (_) => UpdatePassword());
+      case '/description':
+        final args = setting.arguments;
+        return MaterialPageRoute(builder: (_) => MyApp(args.toString()));
     }
   }
 }

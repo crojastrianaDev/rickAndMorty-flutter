@@ -30,6 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   share: ^2.0.1
   media_gallery: ^0.1.5
+  http: ^0.13.3
 
 dev_dependencies:
   flutter_test:
