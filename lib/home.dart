@@ -9,7 +9,14 @@ class HomePage extends StatelessWidget {
         toolbarHeight: 150,
         title: Text('Home'),
         backgroundColor: Color(0xFF3C3E44),
-        actions: [IconButton(icon: Icon(Icons.clear), onPressed: () {})],
+        actions: [
+          IconButton(
+              icon: Icon(
+                Icons.clear,
+                color: Colors.red,
+              ),
+              onPressed: () {})
+        ],
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
             topLeft: Radius.zero,
@@ -103,6 +110,9 @@ class HomePage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.red,
         child: Icon(Icons.menu_open),
+        onPressed: () {
+          _showModalBottomSheet(context);
+        },
       ),
     );
   }
@@ -166,5 +176,36 @@ class HomePage extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  void _showModalBottomSheet(BuildContext context) {
+    showModalBottomSheet(
+        context: context,
+        builder: (context) {
+          return Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              ListTile(
+                leading: new Icon(Icons.edit),
+                title: new Text('Modificar Contraseña'),
+                onTap: () {
+                  Navigator.of(context).pushNamed('/updatePassword/id');
+                },
+              ),
+              ListTile(
+                leading: new Icon(Icons.delete),
+                title: new Text('Modificar Datos'),
+                onTap: () {
+                  Navigator.of(context).pushNamed('/update/id');
+                },
+              ),
+              ListTile(
+                leading: new Icon(Icons.share),
+                title: new Text('Modificar foto'),
+                onTap: () {},
+              ),
+            ],
+          );
+        });
   }
 }

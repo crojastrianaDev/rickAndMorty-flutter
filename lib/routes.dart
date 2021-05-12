@@ -5,6 +5,7 @@ import 'package:taller/register.dart';
 import 'package:taller/home.dart';
 import 'package:taller/description.dart';
 import 'package:taller/updateUser.dart';
+import 'package:taller/updatePassword.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings setting) {
@@ -20,6 +21,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => DescriptionPage());
       case '/update/id':
         return MaterialPageRoute(builder: (_) => UpdateUser());
+      case '/updatePassword/id':
+        return MaterialPageRoute(builder: (_) => UpdatePassword());
     }
   }
 }
