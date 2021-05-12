@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:media_gallery/media_gallery.dart';
 
 class HomePage extends StatelessWidget {
   // names : List<String> = ['Rick', ''];
@@ -203,7 +204,9 @@ class HomePage extends StatelessWidget {
               ListTile(
                 leading: new Icon(Icons.share),
                 title: new Text('Modificar foto'),
-                onTap: () {},
+                onTap: () {
+                  //final File file = await media.getFile();
+                },
               ),
             ],
           );
