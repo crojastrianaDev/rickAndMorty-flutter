@@ -18,6 +18,8 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   Future<Character> futureCharacter;
+
+  List<Character> list;
   var apiCharacter = ApiCharacter();
   String id;
   _MyAppState(this.id);
@@ -26,6 +28,11 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     futureCharacter = apiCharacter.fetchCharacter(this.id);
+    /* apiCharacter
+        .fetchCharacters()
+        .then((value) => {list.add(value), print(list)});
+    
+     */
   }
 
   @override
@@ -62,14 +69,25 @@ class _MyAppState extends State<MyApp> {
                 children: <Widget>[
                   ListTile(
                     // ignore: deprecated_member_use
-                    leading: FlatButton(
-                        onPressed: () {
-                          Share.share('Hola comparto esto contigo');
-                        },
-                        child: Icon(
-                          Icons.share,
-                          color: Colors.red,
-                        )),
+                    leading: FutureBuilder(
+                        future: futureCharacter,
+                        builder: (context, item) {
+                          if (item.hasData) {
+                            // ignore: deprecated_member_use
+                            return FlatButton(
+                                onPressed: () {
+                                  Share.shareFiles(item.data.image);
+                                  Share.share(item.data.name);
+                                },
+                                child: Icon(
+                                  Icons.share,
+                                  color: Colors.red,
+                                ));
+                          } else if (item.hasError) {
+                            return Text("${item.error}");
+                          }
+                          return CircularProgressIndicator();
+                        }),
                     title: FutureBuilder<Character>(
                       future: futureCharacter,
                       builder: (context, snapshot) {
