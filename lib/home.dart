@@ -144,14 +144,18 @@ class HomePage extends StatelessWidget {
             ),
           ),
           ListTile(
-            title: Text('Morty Smith'),
-            leading: Icon(Icons.home),
-            onTap: () => {},
-          ),
-          ListTile(
             title: Text('Rick Sánchez'),
             leading: Icon(Icons.home),
-            onTap: () => {},
+            onTap: () => {
+              Navigator.of(context).pushNamed('/description', arguments: '1')
+            },
+          ),
+          ListTile(
+            title: Text('Morty Smith'),
+            leading: Icon(Icons.home),
+            onTap: () => {
+              Navigator.of(context).pushNamed('/description', arguments: '2')
+            },
           ),
           ListTile(
             title: Text('Summer Smith'),
